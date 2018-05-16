@@ -26,7 +26,7 @@ attr_reader
      if @discount == 0 || @discount == nil
         "There is no discount to apply."
      else
-      "After the discount, the total comes to #{@total}."
+      "After the discount, the total comes to $#{@total}."
     end
    end
 end
