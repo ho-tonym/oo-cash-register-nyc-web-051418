@@ -21,7 +21,7 @@ attr_reader
    def apply_discount
      d = @discount/100.0
      discount_amount = 1 - d # to ge the % amount we want to multiply by
-     @total = (@total * discount_amount).to_nearest_i
+     @total = (@total * discount_amount).to_i
 
      if @discount == 0 || @discount == nil
         "There is no discount to apply."
