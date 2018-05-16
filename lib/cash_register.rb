@@ -41,7 +41,7 @@ attr_reader
    end
 
    def void_last_transaction
-
+     @total - @last_transaction
    end
 
    def add_item(string_item, total, quantity = 1)
