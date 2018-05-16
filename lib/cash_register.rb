@@ -10,6 +10,7 @@ attr_reader
     @discount = d_amount
     @total = 0
     @array_of_items = []
+    @last_transaction = 0
   end
 
   # def add_item(string, total)
@@ -37,6 +38,19 @@ attr_reader
 
    def items
      @array_of_items
+   end
+
+   def void_last_transaction
 
    end
+
+   def add_item(string_item, total, quantity = 1)
+
+     @last_transaction = (total * quantity)
+     @total = @total + @last_transaction
+     quantity.times do
+            @array_of_items << string_item
+     end
+   end
+
 end
