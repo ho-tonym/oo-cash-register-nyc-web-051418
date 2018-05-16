@@ -34,7 +34,7 @@ attr_reader
    end
 
    def items
-     @string_item
+     @array_of_items
 
    end
 end
