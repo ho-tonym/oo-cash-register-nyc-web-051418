@@ -19,7 +19,7 @@ attr_reader
    end
 
    def apply_discount
-     if @discount == 0 || @discount == nil
+     if @discount == 0 || @discount == nil || @total == 0
         "There is no discount to apply."
      else
        d = @discount/100.0
