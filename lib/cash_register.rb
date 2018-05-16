@@ -18,7 +18,9 @@ attr_reader
    def add_item(string_item, total, quantity = 1)
 
      @total = @total + (total * quantity)
-     @array_of_items << string_item
+     quantity.times do
+            @array_of_items << string_item
+     end
    end
 
    def apply_discount
