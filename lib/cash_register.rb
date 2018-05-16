@@ -9,13 +9,16 @@ attr_reader
   def initialize(d_amount = 20)
     @discount = d_amount
     @total = 0
+    @array_of_items = []
   end
 
   # def add_item(string, total)
   #   @total = total
   # end
    def add_item(string_item, total, quantity = 1)
+
      @total = @total + (total * quantity)
+     @array_of_items << string_item
    end
 
    def apply_discount
@@ -30,8 +33,8 @@ attr_reader
     end
    end
 
-   def items(item, price, quantity = 1)
-     array_of_items = []
+   def items
+
      array_of_items << item
    end
 end
