@@ -29,4 +29,9 @@ attr_reader
       "After the discount, the total comes to $#{@total}."
     end
    end
+
+   def items(item, price, quantity = 1)
+     array_of_items = []
+     array_of_items << item
+   end
 end
