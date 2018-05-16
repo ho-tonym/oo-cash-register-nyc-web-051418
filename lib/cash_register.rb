@@ -16,13 +16,15 @@ attr_reader
   # def add_item(string, total)
   #   @total = total
   # end
-   def add_item(string_item, total, quantity = 1)
 
-     @total = @total + (total * quantity)
-     quantity.times do
-            @array_of_items << string_item
+     def add_item(string_item, total, quantity = 1)
+
+       @last_transaction = (total * quantity)
+       @total = @total + @last_transaction
+       quantity.times do
+              @array_of_items << string_item
+       end
      end
-   end
 
    def apply_discount
      if @discount == 0 || @discount == nil || @total == 0
@@ -44,13 +46,5 @@ attr_reader
      @total - @last_transaction
    end
 
-   def add_item(string_item, total, quantity = 1)
-
-     @last_transaction = (total * quantity)
-     @total = @total + @last_transaction
-     quantity.times do
-            @array_of_items << string_item
-     end
-   end
 
 end
